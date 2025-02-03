@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    background-image: url("imagenes/Título.png"); 
+}
+/*Se usa la propiedad stcky ya que fue la única solución que se encontro, ya que en un principio se uso fixed*/
+header{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(111, 166,255);
+}
+header h1{
+    background-color: rgb(111, 166,255);
+    padding: 1%;
+}
+header nav{
+    background-color: rgb(19, 7, 3);
+    overflow: hidden;
+    font-size: medium;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+header nav ul li{
+    display: flex;
+    justify-content:center ;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+header nav ul li a:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+/*Notificaciones*/
+.notificacion{
+    position: relative;
+    width: 50px;
+}
+
+.notificacion:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+  
+.campana{
+    font-size: 30px;
+}
+
+.campana:hover{
+    cursor: url("imagenes/Iconos/1.png"),auto;
+    animation: notificacion 2s infinite;
+}
+  
+.numerito{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: #ff3b3b;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    width: 15px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rebotar 1.5s infinite ease-in-out;
+}
+  
+  /* Animación de la campanita de notificaciones */
+  @keyframes notificacion {
+    0%{
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+  }
+  
+  /* Animación de rebotar para el numero de notificaciones*/
+  @keyframes rebotar {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+/*Se pone el hover para que cambie de color al pasar el ratón por encima, además de cambiar el cursor para darle mejor experiencia con la propiedad cursor:url*/
+
+.fondo_blanco{
+    background-color: #fff;
+    padding: 2%;
+    border-radius: 15px;
+}
+main{
+    width: 90%;
+    margin: auto;
+}
+ footer{
+    width: 100%;
+}
+
+/*Contenedor de la noticia 1 y aside*/
+#contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.oscuro{
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.noticia1,.noticia2,#contact{
+    margin: 30px;
+    background-color: rgb(124, 233, 255);
+}
+.noticia1{
+    text-align: justify;
+    padding: 25px;
+    border-radius: 35px;
+    width: 80%;
+}
+#importante{
+    background-color: #fcffa5;
+    padding: 2%;
+    border-radius: 15px;
+}
+.noticia2{
+    padding: 15px;
+    border-style: inset;
+}
+h2{
+    font-family: "Libre Baskerville", serif;
+}
+p{
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 16px;
+}
+aside{
+    background-color: rgb(124, 233, 255);
+    padding: 2%;
+    width: 20%;
+    border-radius: 20px;
+    height: 100%;
+    margin-top: 31px;
+}
+#aside_h2{
+    padding: 5%;
+    font-size: 2vw;
+}
+/*Ponemos el vw en el font-size para que no se salga de la caja*/
+footer{
+    text-align: center;
+}
+main, footer{
+    margin: 15px auto;
+}
+#contact{
+    text-align: left;
+    border: 2px solid rebeccapurple;
+    padding-left: 1%;
+}
+#contact p,label{
+    padding: 8px;
+}
+ #botones,#bor,#geolocalizacion{
+    margin-left: 4%;
+    margin-bottom: 3%;
+}
+#nom, #ape, #tel, #mail{
+    color: rgb(0, 0, 0);
+    padding: 0.5%;
+}
+.imagenes{
+    display: flex;
+    width: 600px;
+    height: 350px;
+    width: 100%;
+    max-width: 1000px;
+    grid-column: 2;
+    margin-top: 60px;
+}
+.imagenes img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+.imagenes img:hover{
+    cursor: crosshair;
+    width: 80%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+.final{
+    background-color: black;
+    width: 100%;
+    padding: 1%;
+    bottom: 0%;
+    color: #fff;
+}
+.final a{
+    padding: 1%;
+}
+.final p{
+    padding: 1%;
+}
+.libros{
+    border-top-style: double;
+    padding-top: 5%;
+    border-bottom-style: double;
+    padding-bottom: 8%;
+}
+.libros h2{
+    margin-left: 4%;
+    padding-bottom: 2%;
+    background-color: rgb(124, 233, 255);
+    width: 86%;
+}
+/*Se usa la propiedad vw para poner el teexto o las cajas en proporción al tamaño de la página. Se hace responsive*/
+#vacio{
+    border-bottom: none;
+}
+table{
+    width: 80vw;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+table, th, td{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 1%;
+}
+table th{
+    background-color: #fff;
+}
+#contacto{
+    border-top: none;
+    width: 200%;
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to top,black,black,white);
+}
+#bor,#enviar{
+    padding: 1%;
+    border-radius: 15px;
+}
+textarea{
+    padding: 1%;
+    resize: vertical;
+}
+::placeholder{
+    font-style: italic;
+    color: grey;
+}
+#ver_mas{
+    text-align: center;
+    background-color: white;
+}
+#ver_mas:hover{
+    background-color: rgb(255, 237, 121);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+#ver_mas a:hover{
+    background-color: rgb(255, 237, 121);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+#ver_mas td a{
+    color: blue;
+    text-decoration: none;
+}
+#pestaña{
+    margin: 5%;
+}
+.imagen{
+    width: 10vw;
+}
+#muestras{
+    background-color: darksalmon;
+}
+#aviso_legal{
+    overflow: hidden;
+    color: aquamarine;
+    text-decoration: none;
+}
+.final{
+    width: 98%;
+}
+.final nav{
+    padding: 1%;
+}
+.final nav ul{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.final nav ul li{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    background-color: black;
+    width: 15%;
+}
+.final nav ul li a{
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.75vw;
+    color: white;
+    text-decoration: none;
+}
+.final nav ul li a:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+
+.contacto{
+    display: flex;
+}
+
+@media (min-width:201px) and (max-width:768px) {
+    aside{
+        display: none;
+    }
+    .contacto{
+        display:block;
+    }
+    input{
+        width: 50%;
+    }
+    #botones{
+        width: 20%;
+        display: flex;
+    }
+    #dudas{
+        width: 50%;
+    }
+    .imagenes{
+        margin-left: 5%;
+        width: 90%;
+    }
+}
+
+@media (max-width:200px) {
+    body{
+        display: none;
+    }
+}

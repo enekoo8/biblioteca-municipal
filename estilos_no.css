@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(255, 255, 255);
+  background-image: url("imagenes/Título.png"); 
+}
+
+/*Se usa la propiedad stcky ya que fue la única solución que se encontro, ya que en un principio se uso fixed*/
+header{
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgb(111, 166,255);
+}
+header h1{
+  background-color: rgb(111, 166,255);
+  padding: 1%;
+}
+header nav{
+  background-color: rgb(19, 7, 3);
+  overflow: hidden;
+  font-size: medium;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li{
+  display: flex;
+  justify-content:center ;
+}
+header nav ul li a{
+  padding: 10px 20px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 2vw;
+}
+header nav ul li a:hover{
+  background-color: rgb(127, 127, 127);
+  cursor: url("imagenes/Iconos/1.png"),auto;
+}
+
+article{
+  padding: 2%;
+}
+h2{
+  font-family: "Libre Baskerville", serif;
+}
+p{
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+}
+article h2{
+  background-color: #fff;
+  padding: 1%;
+  border-radius: 15px;
+  width: 90%;
+}
+article p{
+  padding: 1.5%;
+}
+section{
+  padding: 2%;
+}
+section h2{
+  background-color: #fff;
+  padding: 1%;
+  border-radius: 15px;
+  width: 90%;
+}
+
+summary{
+  margin-bottom: 2%;
+}
+
+.fotos{
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+}
+
+img{
+  width: 10%;
+}
+
+video{
+  margin-top: 2%;
+  height: 40%;
+  width: 50%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+/*Se pone el inline-end para que la caja no quede deformada en otro lado*/
+footer{
+  float: inline-end;
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+  background-color: rgb(0,0,0);
+  color: white;
+}
+.azul{
+  margin: 3%;
+  background-color: rgb(124, 233, 255);
+  border-radius: 20px;
+}
+section details img{
+  background-color: rgb(124, 233, 255);
+}
+/*Debido a un error se ussa un carácter invisible para que muestre las imagenes*/
+#invisible{
+  color:rgb(124, 233, 255) ;
+}
+#aviso_legal{
+  overflow: hidden;
+  color: aquamarine;
+  text-decoration: none;
+}
+.final{
+  width: 98%;
+}
+.final nav{
+  padding: 1%;
+}
+.final nav ul{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.final nav ul li{
+  float: left;
+  text-decoration: none;
+  list-style: none;
+  background-color: black;
+  width: 15%;
+}
+.final nav ul li a{
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.75vw;
+  color: white;
+  text-decoration: none;
+}
+.final nav ul li a:hover{
+  background-color: rgb(127, 127, 127);
+  cursor: url("imagenes/Iconos/1.png"),auto;
+}

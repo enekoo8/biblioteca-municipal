@@ -1,0 +1,102 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento lateral */
+}
+
+.consulta {
+    width: 90%; /* Reduce el ancho para mejor ajuste */
+    max-width: 800px; /* Limita el ancho máximo */
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    display: block; /* Hace que la tabla sea desplazable */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word; /* Evita que el contenido se salga */
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block; /* Evita desbordamientos */
+}
+
+#volver {
+    display: block;
+    margin: 20px auto; /* Centra en móviles */
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para el enlace eliminar */
+.eliminar {
+    color: red;
+}
+
+.eliminar:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .consulta {
+        width: 95%;
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #volver {
+        margin: 10px auto; /* Centra en pantallas pequeñas */
+        text-align: center;
+    }
+}

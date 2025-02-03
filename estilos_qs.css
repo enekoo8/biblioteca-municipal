@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("imagenes/Título.png"); 
+} 
+
+/*Se usa la propiedad stcky ya que fue la única solución que se encontro, ya que en un principio se uso fixed*/
+header{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(111, 166,255);
+    margin-bottom: 2%;
+}
+header h1{
+    background-color: rgb(111, 166,255);
+    padding: 1%;
+}
+header nav{
+    background-color: rgb(19, 7, 3);
+    overflow: hidden;
+    font-size: medium;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+header nav ul li{
+    display: flex;
+    justify-content:center ;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+header nav ul li a:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.login{
+    width: 25%;
+    justify-content: center;
+}
+.source-sans-3 {
+    font-family: "Source Sans 3", sans-serif;
+    font-style: normal;
+}
+#contenido {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+}
+.Muskiz, .D4RK {
+    width: 85%;
+    background-color: rgb(124, 233, 255);
+    border-radius: 15px;
+    padding: 3%;
+    margin-left: 4%;
+    text-align: justify;
+}
+article h2 {
+    text-shadow: 3.5px 7px rgba(139, 139, 139, 0.3);
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 10px;
+    width: 60%;
+}
+article p, article P {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 16px;
+}
+#logo {
+    width: 80%;
+    transition: transform 0.3s ease-in-out;
+}
+.ayuntamiento {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.foto1{
+    width: 80%;
+    margin-top: 12%;
+}
+
+iframe {
+    margin: 60px;
+    width: 600px; 
+    height: 450px; /* altura del iframe */
+    border: 0;
+}
+
+/* Estilos para el pie de pagina */
+footer {
+    margin-top: 3%;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.final nav {
+    padding: 1%;
+}
+.final nav ul {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.final nav ul li {
+    width: auto; /* permite que los elementos se adapten */
+}
+.final nav ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.75vw;
+    text-decoration: none;
+}
+.final nav ul li a:hover {
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"), auto;
+}
+
+/*Animaciones y transiciones*/
+/*Desplazamiento del footer*/
+footer{
+    animation: desplazamiento 1s ease-out;
+}
+@keyframes desplazamiento {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/*Entrada de todo el contenido*/
+#contenido,.ayuntamiento{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: entrada 3s ease-in-out forwards;
+}
+@keyframes entrada {
+    to{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+article:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+#logo:hover{
+    transform: scale(1.15);
+}
+
+/* Estilo general para móviles (pantallas pequeñas, ≤768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 4vw;
+        width: 100%;
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    header nav ul li a {
+        padding: 10px;
+        font-size: 3vw;
+    }
+
+    #contenido {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        gap: 5%;
+    }
+
+    .Muskiz, .D4RK {
+        padding: 5%;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    article h2 {
+        width: 90%;
+        font-size: 4vw;
+    }
+
+    article p, article P {
+        font-size: 14px;
+    }
+
+    .ayuntamiento{
+        display: flex;
+        flex-direction: column;
+    }   
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    iframe {
+        width: 70%;
+        height: 400px;
+    }
+
+    footer {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .final nav ul {
+        flex-direction: column;
+    }
+
+    .final nav ul li a {
+        font-size: 4vw;
+    }
+}
+
+/* Estilo general para tabletas (768px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 3vw;
+        width: 50%;
+    }
+
+    header nav {
+        height: auto;
+    }
+
+    header nav ul li a {
+        font-size: 2.5vw;
+        padding: 15px;
+    }
+
+    #contenido {
+        grid-template-columns: 1fr; /* Una columna */
+        margin: 3%;
+    }
+
+    .Muskiz, .D4RK {
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        padding: 4%;
+    }
+
+    article h2 {
+        width: 90%;
+        font-size: 2.5vw;
+    }
+
+    article p, article P {
+        font-size: 15px;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    img {
+        width: 95%;
+    }
+
+    iframe {
+        width: 80%;
+        height: 400px;
+    }
+
+    .ayuntamiento {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    .foto1 {
+        width: 90%;
+        margin: auto;
+    }
+
+    footer {
+        margin-top: 3%;
+        font-size: 16px;
+    }
+
+    .final nav ul li a {
+        font-size: 2vw;
+    }
+}
+

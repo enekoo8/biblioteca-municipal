@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url("Imagenes/Título.png");
+}
+/*Se usa la propiedad stcky ya que fue la única solución que se encontro, ya que en un principio se uso fixed*/
+header{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgb(111, 166,255);
+}
+header h1{
+    background-color: rgb(111, 166,255);
+    padding: 1%;
+}
+header nav{
+    background-color: rgb(19, 7, 3);
+    overflow: hidden;
+    font-size: medium;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+header nav ul li{
+    display: flex;
+    justify-content:center ;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+header nav ul li a:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+  
+#Libros{
+    background-color: rgb(124, 233, 255);
+    padding: 1%;
+    font-size: xx-large;
+    margin: 2% 5%;
+    border-radius: 15px;
+}
+h2{
+    width: 60%;
+    margin-bottom: 30%;
+    position: relative;
+    right: -5px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px;
+    font-family: "Libre Baskerville", serif;
+}
+/*Se usa el msimo tipo de letra tanto para los títulos como para los párrafos en todas las páginas*/
+h3{
+    width: 35%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    background-color: rgb(124, 233, 255);
+}
+/*Se usa esto para corregir errores de cajas*/
+div p{
+    display: flex;
+    left: -5px;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgb(111, 166, 255), rgb(233, 217, 217));
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 16px;
+}
+h2,h3, div p{
+    padding: 2%;
+    margin: 2%;
+}
+img{
+    width: 20%;
+    position: relative;
+    margin-left: 30%;
+    display: right;
+}
+div{
+    margin: 5%;
+    padding: 5%;
+}
+h2,img{
+    display:flex;
+    gap: 20px;
+}
+footer{
+    display: inline-end;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: rgb(255, 255, 255);
+}
+#aviso_legal{
+    overflow: hidden;
+    color: aquamarine;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+.final{
+    width: 98%;
+}
+.final nav{
+    padding: 1%;
+}
+.final nav ul{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.final nav ul li{
+    text-decoration: none;
+    list-style: none;
+    background-color: black;
+    width: 15%;
+}
+.final nav ul li a{
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.75vw;
+    color: white;
+    text-decoration: none;
+}
+img{
+    animation-name: libros;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.final nav ul li a:hover{
+    background-color: rgb(127, 127, 127);
+    cursor: url("imagenes/Iconos/1.png"),auto;
+}
+.texto{
+    width: 100%;
+}
+@keyframes libros {
+    0%{
+       transform: scale(0.75); 
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.75);
+    }
+} 
+@media (max-width:900px) {
+    #libros{
+        font-size: medium;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    .texto{
+        display:grid;
+        font-size: 10px;
+    }
+    img{
+        width: 30%;
+        height: 100%;
+        align-self: flex-end;
+    }
+}
+@media(max-width:1024px){
+    #libros{
+        font-size: medium;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .texto{
+        display:grid;
+        font-size: 14px;
+    }
+    img{
+        width: 30%;
+        height: 100%;
+        align-self: flex-end;
+    }
+}
