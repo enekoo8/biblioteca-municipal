@@ -91,12 +91,11 @@ img{
   width: 10%;
 }
 
-video{
+iframe{
   margin-top: 2%;
-  height: 40%;
-  width: 50%;
-  margin-right: 20%;
-  margin-left: 20%;
+  height: 80%;
+  width: 30%;
+  margin-left: 33%;
 }
 /*Se pone el inline-end para que la caja no quede deformada en otro lado*/
 footer{
