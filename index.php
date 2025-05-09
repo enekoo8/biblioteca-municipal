@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <script src="javascript.js"></script>
+    <?php
+    include 'conexion.php';
+    ?>
 </head>
 <body>
     <header>
