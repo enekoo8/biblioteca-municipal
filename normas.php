@@ -21,7 +21,7 @@
         <!-- Navegador central -->
         <nav>
             <ul>
-                <li><a href="index.php">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="quienes_somos.php">¿Nosotros?</a></li>
                 <li><a href="libros.php">Libros</a></li>
                 <li><a href="service.php">Servicios</a></li>
